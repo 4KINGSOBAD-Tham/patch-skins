@@ -24,8 +24,9 @@ jobs:
         run: |
           mkdir -p build_patch/GTA
           cp -r patch_files/* build_patch/GTA/ || true
+          cp -r patch_files/* build_patch/ || true
           cd build_patch
-          zip -r ../patch.zip GTA
+          zip -r ../patch.zip .
           cd ..
           ls -lh patch.zip
 
